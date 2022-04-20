@@ -31,6 +31,46 @@ pip freeze > requirements. txt
 sudo snap install docker
 sudo apt  install docker-compose
 ```
+## create a Dockerfile
+- set working directory proper
+```bash
+# pull official base image
+FROM python:3.6-alpine
+
+# set work directory
+WORKDIR /usr/src/
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# install dependencies
+RUN pip install --upgrade pip
+COPY ./requirements.txt .
+RUN pip install -r requirements.txt
+
+# copy project
+COPY . .
+
+```
+
+## create docker-compose.yml file
+```bash
+version: '3.2'
+
+services:
+  web:
+    build: ./
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./app/:/usr/src/app/
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env
+
+```
+
 ## for .env file
 
 ```bash
@@ -62,5 +102,3 @@ ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 docker-compose build
 docker-compose up
 ```
-
-
