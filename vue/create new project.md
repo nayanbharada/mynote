@@ -16,3 +16,7 @@
 ```bash
    npm run serve
 ```
+4)Install Vuex
+```bash
+   npm install vuex@next --save
+```
