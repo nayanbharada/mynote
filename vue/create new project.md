@@ -16,7 +16,20 @@
 ```bash
    npm run serve
 ```
+
 4)Install Vuex
+#### Project in vuex add step
 ```bash
    npm install vuex@next --save
+```
+- src directory in store name dir create
+- store dir in index.js file create
+
+```bash
+import { createStore } from 'vuex';
+
+
+const store = createStore();
+
+export default store;
 ```
