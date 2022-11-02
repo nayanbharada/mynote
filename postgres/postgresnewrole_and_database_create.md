@@ -33,3 +33,19 @@ DATABASES = {
 }
 
 ```
+
+for backup
+```bash
+pg_dump -h localhost -U postgres birthmodel_local > birthmodel_local_dump.sql
+password: postgres
+```
+
+
+
+for backup restore
+```bash
+pg_restore -h localhost -d birthmodel_local_test -U postgres dumpDataBirthmodel.sql
+
+```
+password : postgres
+
