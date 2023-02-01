@@ -18,6 +18,26 @@ project in multiple setting file
 ```bash
   from .base import *
 ```
+
+- after this we have to change manage.py 
+
+```bash
+  #before
+      os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_react.settings')
+  # after
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_react.settings.base')
+```
+- we have to settings folder in base.py 
+
+- after this wsgi.py in chnages
+
+```bash
+  #before
+      os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_react.settings')
+  # after
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_react.settings.base')
+```
+
 ## How to run
 how to multiple setting file run
 ```bash
