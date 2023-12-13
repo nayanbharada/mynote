@@ -38,3 +38,10 @@ source env/bin/activate
 virtualenv venv --python=python3.6
 
 ```
+
+## for windows
+```bash
+py -m venv .venv
+
+```
+
