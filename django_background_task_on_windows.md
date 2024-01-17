@@ -9,7 +9,7 @@ on windows we have similar to celery Django background schduler.
  - [Ref Demo link](https://medium.com/@robinttt333running-background-tasks-in-django-f4c1d3f6f06e)
 
 
-```http
+```
   pip install django4-background-tasks
 ```
 
@@ -19,13 +19,13 @@ on windows we have similar to celery Django background schduler.
 ## Steps
 
 - First we need to add pip lib for that
-```http
+```
   pip install django4-background-tasks
 ```
 
 - After that you need to change some code in settings.py
 
-```http
+```
   INSTALLED_APPS = [
   .....,
   'background_task',
@@ -33,7 +33,7 @@ on windows we have similar to celery Django background schduler.
   ]
 ```
 
-```http
+```
 pip install migrate
 ```
 - After this command execute 2 tables is create on django admin
@@ -42,7 +42,7 @@ pip install migrate
 - After that you need to create cron.py file for background job
 
 - here example of cron per day which time you want to execute that cron
-```http
+```
 from background_task import background
 from background_task.models import Task
 from datetime import datetime
@@ -62,7 +62,7 @@ send_email()
 
 - after this you need to change on app.py file as well
 
-```http
+```
 from django.apps import AppConfig
 
 
@@ -79,7 +79,7 @@ class VoteUpConfig(AppConfig):
 
 - if you want execute from views.py
 
-```http
+```
 from background_task import background
 from django.contrib.auth.models import User
 
