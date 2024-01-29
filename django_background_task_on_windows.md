@@ -6,7 +6,7 @@ on windows we have similar to celery Django background schduler.
 ## Acknowledgements
 
  - [Reference link](https://pypi.org/project/django4-background-tasks/)
- - [Ref Demo link](https://medium.com/@robinttt333running-background-tasks-in-django-f4c1d3f6f06e)
+ - [Ref Demo link](https://medium.com/@robinttt333/running-background-tasks-in-django-f4c1d3f6f06e)
 
 
 ```
