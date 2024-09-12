@@ -7,7 +7,7 @@ How we can create any sql datababse backup using query.
 
 #### Query
 
-```http
+```bash
   BACKUP DATABASE Taskmangement_syss
   TO DISK = 'D:\backups\Taskmangement_syss.bak';
 ```
@@ -20,7 +20,7 @@ How we can create any sql datababse backup using query.
 
 #### Query
 
-```http
+```bash
 RESTORE DATABASE Taskmangement_syss
 FROM DISK = 'D:\db_backup\Taskmangement_syss.bak'
 WITH MOVE 'Taskmangement_syss' TO 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\Taskmangement_syss.mdf',
@@ -33,7 +33,7 @@ REPLACE;
 - mdf and ldf file name is same as db name
 
 **If face error on mdf and ldf file:**
-```http
+```bash
 RESTORE FILELISTONLY 
     FROM DISK = 'D:\db_backup\Intercompany_Reconciliation_Dev.bak'
 ```
@@ -43,7 +43,7 @@ RESTORE FILELISTONLY
 - that return log and mdf original name that issue face on when db name renamed.
 - after this query you need to run restore query
 
-```http
+```bash
 RESTORE DATABASE Intercompany_Reconciliation_Dev
 FROM DISK = 'D:\db_backup\Intercompany_Reconciliation_Dev.bak'
 WITH MOVE 'Intercompany Reconciliation' TO 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\Intercompany Reconciliation.mdf',
