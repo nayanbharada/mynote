@@ -50,4 +50,3 @@ WITH MOVE 'Intercompany Reconciliation' TO 'C:\Program Files\Microsoft SQL Serve
 MOVE 'Intercompany Reconciliation_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\Intercompany Reconciliation_log.ldf',
 REPLACE;
 ```
-
